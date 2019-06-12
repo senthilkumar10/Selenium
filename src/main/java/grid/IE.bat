@@ -1,0 +1,1 @@
+java -jar selenium-server-standalone-3.6.0.jar -role wd -port 5577 -hub http://192.168.43.248:4444/grid/register -browser "browserName=internet explorer,platform=WINDOWS, maxInstances=5" -maxSession 2
