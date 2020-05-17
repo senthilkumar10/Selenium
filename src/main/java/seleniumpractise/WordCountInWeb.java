@@ -18,9 +18,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WordCountInWeb {
 
 	public static void main(String[] args)  {
-		
+
 		//System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 		WebDriver driver;
+
+		
 		
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
@@ -35,6 +37,8 @@ public class WordCountInWeb {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get("https://www.google.co.in/");
+
+		driver.quit();
 	
 		//driver.findElement(By.xpath("//input[contains(@class,'gsfi')]")).sendKeys("cricket");
 		//driver.findElement(By.xpath("//input[contains(@class,'gsfi')]")).sendKeys(Keys.TAB);
